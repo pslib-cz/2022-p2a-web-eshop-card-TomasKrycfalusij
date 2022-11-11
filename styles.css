@@ -1,0 +1,190 @@
+/* Obrázek přes :before / :after a přes "content" */
+* {
+    font-family: 'Exo 2', sans-serif;
+    --color-button: rgb(63, 181, 0);
+    --color-button-dark: rgb(50, 143, 0);
+    --color-bonus: #558EAC;
+    --color-hr: hsla(205, 82%, 43%, 0.3);
+    --color-card-border: rgba(211, 211, 211, 0.5);
+    --color-card-shadow: rgba(128, 128, 128, 0.1);
+    --color-card-shadow-hover: rgba(128, 128, 128, 0.3);
+    --color-footer-p: rgb(154, 154, 154);
+    --color-new-background: #DCF1FB;
+    
+}
+
+body{
+    justify-content: center;
+}
+
+.products_page {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 35px;
+    justify-content: center;
+    margin: 0px auto;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.card {
+    max-width: 22em;
+    padding: 13px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--color-card-border);
+    transition: 0.5s;
+    box-shadow: 0 0 10px var(--color-card-shadow);
+    margin: 10px;
+    overflow: hidden;
+}
+
+.footer_a {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+}
+.button {
+    display: inline-block;
+    border-style: solid;
+    border-width: 0px;
+    text-align: center;
+    cursor: pointer;
+    background-color: var(--color-button);
+    padding: 10px 25px 10px 25px;
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    flex: 0;
+    align-self: flex-end;
+    transition: 0.5s;
+}
+
+.name_of_phone {
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+footer h2 {
+    font-size: 20px;
+    font-weight: 700;
+    flex: 1;
+    align-self: flex-start;
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
+
+.card:hover {
+    border-color: red;
+    transition: 0.5s;
+    box-shadow: 0 0 10px var(--color-card-shadow-hover);
+}
+
+.card:hover .button {
+    background-color: var(--color-button-dark);
+    transition: 0.5s;
+}
+
+.card img {
+    max-width: 100%;
+    max-height: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 0;
+}
+
+footer p {
+    color: black;
+    font-weight: 400;
+    max-height: 91px;
+    margin-top: 1px;
+    padding-top: 1px;
+    font-size: 13px;
+    color: var(--color-footer-p);
+}
+
+hr  
+{  
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-hr);
+    border-style: none;
+    margin-top: 1em;
+}
+
+.availability {
+    width: 100%;
+    text-align: right;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.availability_status {
+    color: green;
+    font-weight: 400;
+}
+
+#unavailable {
+    color: red;
+}
+
+.availability_amount {
+    margin-left: 3px;
+    color: black;
+    font-weight: 400;
+}
+
+#new {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    bottom: 0px;
+    left: 0px;
+    margin: 0;
+    background-color: var(--color-new-background);
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 900;
+    color: var(--color-bonus);
+    text-transform: uppercase;
+    cursor: pointer;
+    align-self: flex-end;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    position: relative;
+}
+
+@media screen and (max-width: 1380px)
+{
+    .card
+    {
+        max-width: 17em;
+    }
+}
+
+@media screen and (max-width: 900px)
+{
+    .card
+    {
+        max-width: 40%;
+        flex-grow: 1;
+        flex-shrink: 1;
+        min-width: 1em;
+    }
+}
+
+@media screen and (max-width: 550px)
+{
+    .card
+    {
+        max-width: 100%;
+    }
+}
