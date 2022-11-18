@@ -31,7 +31,6 @@ body{
     padding-top: 35px;
     justify-content: center;
     margin: 0px auto;
-    flex-grow: 1;
     flex-shrink: 1;
 }
 
